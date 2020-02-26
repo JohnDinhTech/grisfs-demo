@@ -19,6 +19,7 @@ const runServer = async () => {
 
 				if (file.length === 0 || !file) {
 					res.status(404).json({ err: "This file does not exist" });
+					res.redirect("/");
 				} else {
 					gfs.openDownloadStreamByName(filename).pipe(res);
 				}
