@@ -1,0 +1,25 @@
+{
+	"name": "gridfs-demo",
+	"version": "1.0.0",
+	"description": "Simple app to upload files to MongoDB",
+	"main": "server.js",
+	"repository": "https://github.com/JohnDinhTech/grisfs-demo.git",
+	"author": "John Dinh <johnduydinh@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"start": "node server.js",
+		"server": "nodemon server",
+		"dev": "concurrently \"npm run server\" \"npm run start --prefix client\""
+	},
+	"dependencies": {
+		"express": "^4.17.1",
+		"mongoose": "^5.9.2",
+		"multer": "^1.4.2",
+		"multer-gridfs-storage": "^4.0.2"
+	},
+	"devDependencies": {
+		"concurrently": "^5.1.0",
+		"dotenv": "^8.2.0",
+		"nodemon": "^2.0.2"
+	}
+}
